@@ -14,18 +14,20 @@ const ToggleWrapper = styled.div`
   min-width: 50px;
   height: 20px;
   border-radius: 25px;
-  border: 2px solid black;
+  border: 2px solid var(--textColor);
   margin: auto 0;
   display: flex;
   cursor: pointer;
+  background: var(--primary); ;
 `;
 
 const Notch = styled.div<NotchProps>`
-  height: 18px;
+  height: 17px;
   width: 18px;
-  border: 1px solid black;
-  margin-top: 0px;
-  background: white;
+  border: 1px solid var(--textColor);
+  margin-top: 2px;
+  margin-left: 1px;
+  background: var(--tertiary);
   border-radius: 50%;
   transition: transform 0.1s linear;
   transform: translate(${(props) => (props.isActive ? '30px' : '0px')});

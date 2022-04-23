@@ -7,9 +7,8 @@ import GlobalStyle from './styles/GlobalStyle';
 import { lightTheme, darkTheme } from './themes';
 import { CustomTheme } from './themes/types';
 
-import { Button, Header, Heading } from './components';
 import { routes } from './types';
-import { Home, Counter } from './pages';
+import { Home, Counter, Videos } from './pages';
 
 function App() {
   // const { theme: contextTheme } = useContext(ThemeContext);
@@ -26,6 +25,7 @@ function App() {
         <Routes>
           <Route path={routes.HOME} element={<Home />} />
           <Route path={routes.COUNTER} element={<Counter />} />
+          <Route path={routes.VIDEOS} element={<Videos />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

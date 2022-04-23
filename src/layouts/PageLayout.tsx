@@ -1,9 +1,11 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState } from 'react';
 import styled from 'styled-components';
-import { Header, Menu } from '../components';
+import { Header, Heading, Menu } from '../components';
+import { MenuContext } from '../context';
 import { Content } from './Content';
 
 interface Props {
+  title: string;
   children: ReactNode;
 }
 
@@ -13,13 +15,22 @@ const Wrapper = styled.div`
   min-height: 100vh;
 `;
 
-const PageLayout = ({ children }: Props) => {
+const PageLayout = ({ title, children }: Props) => {
+  const [open, setOpen] = useState<boolean>(false);
+
   return (
-    <Wrapper>
-      <Header />
-      <Menu />
-      <Content>{children}</Content>
-    </Wrapper>
+    <MenuContext.Provider value={{ open, setOpen }}>
+      <Wrapper>
+        <Header />
+        <Menu open={open} />
+        <Content>
+          <Heading textAlign="center" as={'h2'}>
+            {title}
+          </Heading>
+          {children}
+        </Content>
+      </Wrapper>
+    </MenuContext.Provider>
   );
 };
 

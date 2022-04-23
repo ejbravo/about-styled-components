@@ -7,11 +7,8 @@ import { PageLayout } from '../layouts';
 const Home = () => {
   const { id } = useContext(ThemeContext);
   return (
-    <PageLayout>
-      <Heading level="h2" center>
-        Home
-      </Heading>
-      <Heading level="h3" center>{`${id} theme`}</Heading>
+    <PageLayout title="Hi World!">
+      <Heading textAlign="center" as={'h3'}>{`${id} theme`}</Heading>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos provident
         cumque possimus illo, velit cupiditate dolorem delectus repellendus quae

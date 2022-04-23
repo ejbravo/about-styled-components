@@ -7,8 +7,8 @@ import { PageLayout } from '../layouts';
 const Counter = () => {
   const { id } = useContext(ThemeContext);
   return (
-    <PageLayout>
-      <Heading level="h2" center>
+    <PageLayout title="A bored counter">
+      <Heading textAlign="center" as={'h2'}>
         Counter
       </Heading>
       <Paragraph>

@@ -2,9 +2,9 @@ import { CustomTheme } from './types';
 
 const theme: CustomTheme = {
   id: 'dark',
-  background: '#3d5676',
+  background: '#26364a',
   textColor: '#ffffff',
-  linkColor: '#efefef',
+  linkColor: '#b4c3d8',
   palette: {
     primary: '#4c6a92',
     secondary: '#b4c3d8',
