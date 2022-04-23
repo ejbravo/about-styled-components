@@ -10,6 +10,7 @@ interface Props {
 const Wrapper = styled.div`
   color: ${(props) => props.theme.textColor};
   background: ${(props) => props.theme.background};
+  min-height: 100vh;
 `;
 
 const PageLayout = ({ children }: Props) => {
