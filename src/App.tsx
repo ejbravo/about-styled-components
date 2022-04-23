@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useCallback, useContext, useEffect, useState } from 'react';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
@@ -8,27 +8,24 @@ import { lightTheme, darkTheme } from './themes';
 import { CustomTheme } from './themes/types';
 
 import { Button, Header, Heading } from './components';
-import { Home } from './pages/Home';
+import { routes } from './types';
+import { Home, Counter } from './pages';
 
 function App() {
   // const { theme: contextTheme } = useContext(ThemeContext);
-  const [theme, setTheme] = useState<CustomTheme>(lightTheme);
+  const [themeState, setThemeState] = useState<CustomTheme>(lightTheme);
+
+  const setTheme = () => {
+    setThemeState((state) => (state.id === 'light' ? darkTheme : lightTheme));
+  };
 
   return (
-    <ThemeProvider
-      theme={{
-        ...theme,
-        setTheme: () => {
-          return setTheme((state) =>
-            state.id === 'light' ? darkTheme : lightTheme
-          );
-        },
-      }}
-    >
+    <ThemeProvider theme={{ ...themeState, setTheme }}>
       <GlobalStyle />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path={routes.HOME} element={<Home />} />
+          <Route path={routes.COUNTER} element={<Counter />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

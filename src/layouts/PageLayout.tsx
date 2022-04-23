@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
-import { Header } from '../components';
+import { Header, Menu } from '../components';
 import { Content } from './Content';
 
 interface Props {
@@ -17,6 +17,7 @@ const PageLayout = ({ children }: Props) => {
   return (
     <Wrapper>
       <Header />
+      <Menu />
       <Content>{children}</Content>
     </Wrapper>
   );

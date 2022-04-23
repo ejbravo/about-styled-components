@@ -4,10 +4,11 @@ import styled, { ThemeContext } from 'styled-components';
 import { Heading } from './Heading';
 import { Toggle } from './Toggle';
 
-const HeaderWrapper = styled.div`
+const HeaderWrapper = styled.header`
   display: flex;
   justify-content: space-evenly;
   background-color: ${(props) => props.theme.palette.primary};
+  background-color: var(--primary);
 `;
 
 const Header = () => {

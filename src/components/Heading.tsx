@@ -14,6 +14,8 @@ interface HeadingProps {
 const HeadingWrapper = styled.h1<HeadingProps>`
   text-align: ${(props) => (props.center ? 'center' : 'left')};
   color: ${(props) => props.theme.textColor};
+  // border: 1px solid ${(props) => props.theme.palette.danger};
+  border: 1px solid var(--dangerColor);
 `;
 
 const Heading = ({ level, children, ...props }: Props) => {
