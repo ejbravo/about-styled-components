@@ -1,4 +1,4 @@
-type ThemeType = 'light' | 'dark';
+export type ThemeType = 'light' | 'dark';
 
 export interface CustomTheme {
   id: ThemeType;
