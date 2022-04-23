@@ -8,15 +8,17 @@ const Home = () => {
   const { id } = useContext(ThemeContext);
   return (
     <PageLayout>
-      <Heading>Home</Heading>
-      <Paragraph bold center>{`${id} theme`}</Paragraph>
+      <Heading level="h2" center>
+        Home
+      </Heading>
+      <Heading level="h3" center>{`${id} theme`}</Heading>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos provident
         cumque possimus illo, velit cupiditate dolorem delectus repellendus quae
         porro dolorum assumenda! Rem magnam facilis quae odit, explicabo alias
         velit.
       </p>
-      <Paragraph>
+      <Paragraph center>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
         laudantium sequi quasi aperiam ipsam sint temporibus minima in
         cupiditate fugit? Labore alias odio consequuntur blanditiis qui, sequi
