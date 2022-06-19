@@ -27,16 +27,19 @@ const MenuWrapper = styled.nav<Props>`
   }
 `;
 
+const getPathName = (path: string): string => {
+  if (path === RouteNames.HOME) return 'home';
+  return path.replace(/\//g, '').replace(/-/g, ' ');
+};
+
 const Menu = ({ open }: Props) => {
   const { id, setTheme } = useContext(ThemeContext);
 
   return (
     <MenuWrapper open={open}>
-      {Object.entries(RouteNames).map(([name, path], index) => (
+      {Object.values(RouteNames).map((path, index) => (
         <StyledLink key={index} to={path}>
-          {path === RouteNames.HOME
-            ? name
-            : path.replace(/\//g, '').replace(/-/g, ' ')}
+          {getPathName(path)}
         </StyledLink>
       ))}
       <Toggle isActive={id === 'dark'} onToggle={setTheme} />

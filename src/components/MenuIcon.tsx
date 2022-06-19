@@ -1,10 +1,8 @@
 import styled from 'styled-components';
 
 const MenuIcon = styled.div`
-  cursor: pointer;
-  width: 25px;
-  min-width: 25px;
-  padding: 5px;
+  width: 2rem;
+  padding: 5px 0 10px;
 
   > div {
     height: 3px;

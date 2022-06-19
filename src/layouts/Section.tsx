@@ -18,4 +18,4 @@ const Section = ({ title, children }: Props) => {
   );
 };
 
-export {Section}
+export { Section };
