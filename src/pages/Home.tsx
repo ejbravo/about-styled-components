@@ -1,44 +1,41 @@
 import React, { useContext } from 'react';
-import { ThemeContext } from 'styled-components';
 
-import { Heading, Paragraph } from '../components';
-import { PageLayout } from '../layouts';
+import { Divider, List, Paragraph } from '../components';
+import { PageLayout, Section } from '../layouts';
 
 const Home = () => {
-  const { id } = useContext(ThemeContext);
   return (
-    <PageLayout title="Hi World!">
-      <Heading textAlign="center" as={'h3'}>{`${id} theme`}</Heading>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos provident
-        cumque possimus illo, velit cupiditate dolorem delectus repellendus quae
-        porro dolorum assumenda! Rem magnam facilis quae odit, explicabo alias
-        velit.
-      </p>
-      <Paragraph center>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-        laudantium sequi quasi aperiam ipsam sint temporibus minima in
-        cupiditate fugit? Labore alias odio consequuntur blanditiis qui, sequi
-        soluta tenetur corporis!
-      </Paragraph>
-      <Paragraph italic>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-        laudantium sequi quasi aperiam ipsam sint temporibus minima in
-        cupiditate fugit? Labore alias odio consequuntur blanditiis qui, sequi
-        soluta tenetur corporis!
-      </Paragraph>
-      <Paragraph bold>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-        laudantium sequi quasi aperiam ipsam sint temporibus minima in
-        cupiditate fugit? Labore alias odio consequuntur blanditiis qui, sequi
-        soluta tenetur corporis!
-      </Paragraph>
-      <Paragraph bold italic>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-        laudantium sequi quasi aperiam ipsam sint temporibus minima in
-        cupiditate fugit? Labore alias odio consequuntur blanditiis qui, sequi
-        soluta tenetur corporis!
-      </Paragraph>
+    <PageLayout title="Introduction">
+      <Section title="Official definition">
+        <Paragraph>
+          Utilizing tagged <i>template literals</i> (a recent addition to
+          JavaScript) and the power of <i>CSS</i>, <b>styled-components</b>{' '}
+          allows you to write actual CSS code to style your components. It also
+          removes the mapping between components and styles – using components
+          as a low-level styling construct could not be easier!
+        </Paragraph>
+      </Section>
+
+      <Divider />
+
+      <Section title="What are styled components?">
+        <Paragraph>
+          The <b>styled-components</b> is a wonderful tool that came up as an
+          alternative for styling the React components using CSS and the
+          advantages offered by ES6.
+        </Paragraph>
+        <List>
+          <li>
+            With styled-components we can create a React components at the same
+            time we are defining their styles.
+          </li>
+          <li>
+            Also, we can add it properties, which makes it useful and dynamic.
+          </li>
+        </List>
+      </Section>
+
+      <Divider />
     </PageLayout>
   );
 };

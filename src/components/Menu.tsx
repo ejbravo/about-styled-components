@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import styled, { ThemeContext } from 'styled-components';
 
-import { routes } from '../types';
+import { RouteNames } from '../types';
 import { StyledLink } from './StyledLink';
 import { Toggle } from './Toggle';
 
@@ -32,9 +32,11 @@ const Menu = ({ open }: Props) => {
 
   return (
     <MenuWrapper open={open}>
-      {Object.entries(routes).map(([name, path], index) => (
+      {Object.entries(RouteNames).map(([name, path], index) => (
         <StyledLink key={index} to={path}>
-          {name}
+          {path === RouteNames.HOME
+            ? name
+            : path.replace(/\//g, '').replace(/-/g, ' ')}
         </StyledLink>
       ))}
       <Toggle isActive={id === 'dark'} onToggle={setTheme} />

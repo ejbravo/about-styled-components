@@ -6,3 +6,7 @@ export * from './Paragraph';
 export * from './Menu';
 export * from './StyledLink';
 export * from './MenuIcon';
+export * from './Divider';
+export * from './List';
+export * from './Span';
+export * from './Component';

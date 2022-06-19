@@ -7,8 +7,16 @@ import GlobalStyle from './styles/GlobalStyle';
 import { lightTheme, darkTheme } from './themes';
 import { CustomTheme } from './themes/types';
 
-import { routes } from './types';
-import { Home, Counter, Videos } from './pages';
+import { RouteNames } from './types';
+import {
+  Home,
+  Counter,
+  GettingStarted,
+  Videos,
+  ProsVsCons,
+  Examples,
+  Test,
+} from './pages';
 
 function App() {
   // const { theme: contextTheme } = useContext(ThemeContext);
@@ -23,9 +31,16 @@ function App() {
       <GlobalStyle />
       <BrowserRouter>
         <Routes>
-          <Route path={routes.HOME} element={<Home />} />
-          <Route path={routes.COUNTER} element={<Counter />} />
-          <Route path={routes.VIDEOS} element={<Videos />} />
+          <Route path={RouteNames.HOME} element={<Home />} />
+          <Route path={RouteNames.PROSVsCONS} element={<ProsVsCons />} />
+          <Route
+            path={RouteNames.GETTINGSTARTED}
+            element={<GettingStarted />}
+          />
+          <Route path={RouteNames.EXAMPLES} element={<Examples />} />
+          <Route path={RouteNames.COUNTER} element={<Counter />} />
+          <Route path={RouteNames.VIDEOS} element={<Videos />} />
+          <Route path={RouteNames.TEST} element={<Test />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
