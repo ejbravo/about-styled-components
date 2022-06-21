@@ -9,8 +9,6 @@ const HeaderWrapper = styled.header`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: ${(props) => props.theme.palette.primary};
-  background-color: var(--primary);
   padding-top: 1rem;
 
   ${Heading} {

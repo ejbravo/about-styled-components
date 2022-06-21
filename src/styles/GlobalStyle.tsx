@@ -16,8 +16,6 @@ const GlobalStyle = createGlobalStyle`
     --tertiary: ${(props) => props.theme.palette.tertiary};
     --warning: ${(props) => props.theme.palette.warning};
     --danger: ${(props) => props.theme.palette.danger};
-
-    // sizes
   }
 `;
 

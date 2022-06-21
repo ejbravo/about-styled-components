@@ -11,8 +11,8 @@ const StyledComponent = styled.div<Props>`
       display: inline-block;
       padding: 1rem;
       margin: 1rem 0;
-      color: blueviolet;
-      border: 1px solid blueviolet;
+      color: var(--primary);
+      border: 1px solid var(--primary);
       font-weight: bold;
     `}
 `;

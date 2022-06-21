@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
@@ -19,7 +19,6 @@ import {
 } from './pages';
 
 function App() {
-  // const { theme: contextTheme } = useContext(ThemeContext);
   const [themeState, setThemeState] = useState<CustomTheme>(lightTheme);
 
   const setTheme = () => {
