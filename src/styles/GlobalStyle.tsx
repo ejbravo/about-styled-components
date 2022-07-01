@@ -6,16 +6,16 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
 
-    --background: ${(props) => props.theme.background};
-    --text: ${(props) => props.theme.textColor};
-    --link: ${(props) => props.theme.linkColor};
+    --background: ${({ theme }) => theme.background};
+    --text: ${({ theme }) => theme.textColor};
+    --link: ${({ theme }) => theme.linkColor};
 
     // colors
-    --primary: ${(props) => props.theme.palette.primary};
-    --secondary: ${(props) => props.theme.palette.secondary};
-    --tertiary: ${(props) => props.theme.palette.tertiary};
-    --warning: ${(props) => props.theme.palette.warning};
-    --danger: ${(props) => props.theme.palette.danger};
+    --primary: ${({ theme }) => theme.palette.primary};
+    --secondary: ${({ theme }) => theme.palette.secondary};
+    --tertiary: ${({ theme }) => theme.palette.tertiary};
+    --warning: ${({ theme }) => theme.palette.warning};
+    --danger: ${({ theme }) => theme.palette.danger};
   }
 `;
 

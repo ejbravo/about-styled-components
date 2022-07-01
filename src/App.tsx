@@ -10,7 +10,7 @@ import { CustomTheme } from './themes/types';
 import { RouteNames } from './types';
 import {
   Home,
-  Counter,
+  CounterPage,
   GettingStarted,
   Videos,
   ProsVsCons,
@@ -37,8 +37,8 @@ function App() {
             element={<GettingStarted />}
           />
           <Route path={RouteNames.EXAMPLES} element={<Examples />} />
-          <Route path={RouteNames.COUNTER} element={<Counter />} />
-          <Route path={RouteNames.VIDEOS} element={<Videos />} />
+          <Route path={RouteNames.COUNTER} element={<CounterPage />} />
+          {/* <Route path={RouteNames.VIDEOS} element={<Videos />} /> */}
           <Route path={RouteNames.TEST} element={<Test />} />
         </Routes>
       </BrowserRouter>

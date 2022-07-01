@@ -10,3 +10,5 @@ export * from './Divider';
 export * from './List';
 export * from './Span';
 export * from './Component';
+export * from './Counter';
+export * from './CounterResult';

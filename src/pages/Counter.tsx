@@ -1,24 +1,14 @@
-import React, { useContext } from 'react';
-import { ThemeContext } from 'styled-components';
+import React from 'react';
 
-import { Heading, Paragraph } from '../components';
+import { Counter } from '../components';
 import { PageLayout } from '../layouts';
 
-const Counter = () => {
-  const { id } = useContext(ThemeContext);
+const CounterPage = () => {
   return (
-    <PageLayout title="A bored counter">
-      <Heading textAlign="center" as={'h2'}>
-        Counter
-      </Heading>
-      <Paragraph>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos provident
-        cumque possimus illo, velit cupiditate dolorem delectus repellendus quae
-        porro dolorum assumenda! Rem magnam facilis quae odit, explicabo alias
-        velit.
-      </Paragraph>
+    <PageLayout title="Counter" center>
+      <Counter />
     </PageLayout>
   );
 };
 
-export { Counter };
+export { CounterPage };

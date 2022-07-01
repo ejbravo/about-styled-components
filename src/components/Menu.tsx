@@ -1,5 +1,4 @@
-import React, { useContext, useState } from 'react';
-import styled, { ThemeContext } from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 
 import { RouteNames } from '../types';
 import { StyledLink } from './StyledLink';
@@ -33,7 +32,7 @@ const getPathName = (path: string): string => {
 };
 
 const Menu = ({ open }: Props) => {
-  const { id, setTheme } = useContext(ThemeContext);
+  const { id, setTheme } = useTheme();
 
   return (
     <MenuWrapper open={open}>
@@ -48,3 +47,5 @@ const Menu = ({ open }: Props) => {
 };
 
 export { Menu };
+
+// const { id, setTheme } = useContext(ThemeContext);
